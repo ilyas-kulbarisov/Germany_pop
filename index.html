@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ваше имя — Projects</title>
+  <meta name="description" content="Портфолио и проекты" />
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 32px 18px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    nav a { margin-left: 14px; text-decoration:none; opacity:.8; }
+    nav a:hover { opacity:1; text-decoration:underline; }
+    .hero { padding: 42px 0 28px; }
+    .hero h1 { font-size: 40px; margin: 0 0 10px; letter-spacing: -0.02em; }
+    .hero p { max-width: 65ch; margin: 0; opacity:.85; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:14px; margin-top: 22px; }
+    .card { border:1px solid rgba(127,127,127,.25); border-radius: 14px; padding: 14px 14px; }
+    .card h3 { margin: 0 0 6px; }
+    .card p { margin: 0; opacity:.85; }
+    footer { margin-top: 34px; opacity:.7; font-size: 13px; }
+    .pill { display:inline-block; padding: 2px 10px; border:1px solid rgba(127,127,127,.25); border-radius: 999px; font-size: 12px; opacity:.85;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div><strong>Ваше имя</strong> <span class="pill">Portfolio</span></div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/ВАШ_НИК">GitHub</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="about">
+      <h1>Привет! Я …</h1>
+      <p>Коротко: кто вы и чем занимаетесь. Здесь можно добавить 1–2 строки про ключевые интересы/навыки.</p>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin:0 0 10px;">Проекты</h2>
+      <div class="grid">
+        <a class="card" href="#" style="color:inherit">
+          <h3>Germany Buffer Map</h3>
+          <p>Интерактивная карта с расчётом радиуса для 4M населения.</p>
+        </a>
+        <a class="card" href="#" style="color:inherit">
+          <h3>Ещё проект</h3>
+          <p>Короткое описание в 1 строку.</p>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> • Email: you@example.com
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
